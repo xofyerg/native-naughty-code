@@ -1,0 +1,10 @@
+.input-form {
+  @extend %flex-column;
+  gap: 15px;
+  padding: 25px;
+  width: 50%;
+
+  &__title {
+    font-size: 35px;
+  }
+}
