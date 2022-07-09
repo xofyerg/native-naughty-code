@@ -1,10 +1,24 @@
 .input-form {
   @extend %flex-column;
-  gap: 15px;
-  padding: 25px;
-  width: 50%;
+  @extend %border-form;
+  max-width: 740px;
 
   &__title {
     font-size: 35px;
+    margin-bottom: 15px;
+  }
+
+  &__label {
+    font-size: 13px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+  }
+
+  &__input {
+    margin-bottom: 15px;
+  }
+
+  &__btn {
+    max-width: 150px;
   }
 }

@@ -7,3 +7,10 @@
   display: flex;
   flex-direction: column;
 }
+
+%border-form {
+  padding: 25px;
+  margin: 25px;
+  border: 1px solid $color-black;
+  border-radius: 5px;
+}

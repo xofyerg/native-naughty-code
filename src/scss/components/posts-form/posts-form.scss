@@ -1,0 +1,9 @@
+.posts-form {
+  @extend %border-form;
+
+  &__item {
+    border: 1px solid $color-black;
+    border-radius: 5px;
+    padding: 4px;
+  }
+}
