@@ -1,11 +1,11 @@
 //@font-face {
 //  font-family: MontserratLight;
-//  src: url(src/fonts/Montserrat-Light.ttf);
+//  src: url("src/fonts/Montserrat-Light.ttf");
 //}
 
-//body {
-//  font-family: MontserratLight, "sans-serif";
-//}
+body {
+  font-family: MontserratLight, "sans-serif";
+}
 
 .container {
   width: 100%;
@@ -16,9 +16,9 @@
   display: flex;
 }
 
-.col {
-  display: flex;
-  flex-direction: column;
+.content {
+  padding: 25px;
+  width: 740px;
 }
 
 .primary-btn {

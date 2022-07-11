@@ -1,7 +1,6 @@
 .input-form {
   @extend %flex-column;
-  @extend %border-form;
-  max-width: 740px;
+  margin-bottom: 25px;
 
   &__title {
     font-size: 35px;

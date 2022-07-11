@@ -84,11 +84,8 @@ h6 {
   flex-direction: column;
 }
 
-.posts-form, .input-form {
-  padding: 25px;
-  margin: 25px;
-  border: 1px solid #000000;
-  border-radius: 5px;
+body {
+  font-family: MontserratLight, "sans-serif";
 }
 
 .container {
@@ -100,9 +97,9 @@ h6 {
   display: flex;
 }
 
-.col {
-  display: flex;
-  flex-direction: column;
+.content {
+  padding: 25px;
+  width: 740px;
 }
 
 .primary-btn {
@@ -121,7 +118,7 @@ h6 {
 .sidebar {
   width: 245px;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.63);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
 }
 .sidebar__title {
@@ -134,7 +131,7 @@ h6 {
 }
 
 .input-form {
-  max-width: 740px;
+  margin-bottom: 25px;
 }
 .input-form__title {
   font-size: 35px;
@@ -153,7 +150,6 @@ h6 {
 }
 
 .posts-form__item {
-  border: 1px solid #000000;
   border-radius: 5px;
   padding: 4px;
 }
