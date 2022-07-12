@@ -1,7 +1,17 @@
 .posts-form {
+  @extend %flex-column;
+  gap: 8px;
 
   &__item {
-    border-radius: 5px;
-    padding: 4px;
+  }
+
+  &__date {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: bold;
   }
 }

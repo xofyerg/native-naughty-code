@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -79,13 +80,17 @@ h6 {
   font-weight: inherit;
 }
 
-.input-form {
+.posts-form, .input-form {
   display: flex;
   flex-direction: column;
 }
 
 body {
-  font-family: MontserratLight, "sans-serif";
+  font-family: Montserrat, sans-serif;
+}
+
+:disabled {
+  cursor: not-allowed;
 }
 
 .container {
@@ -149,9 +154,44 @@ body {
   max-width: 150px;
 }
 
-.posts-form__item {
+.posts-form {
+  gap: 8px;
+}
+.posts-form__date {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+.posts-form__text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modal-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.modal-window {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+.modal-window__content {
+  padding: 20px 25px;
   border-radius: 5px;
-  padding: 4px;
+  background: #ffffff;
+  margin: auto;
+  min-width: 600px;
+  min-height: 250px;
+  z-index: 10;
 }
 
 /*# sourceMappingURL=style.css.map */

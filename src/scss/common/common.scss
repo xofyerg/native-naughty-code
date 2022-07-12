@@ -1,10 +1,9 @@
-//@font-face {
-//  font-family: MontserratLight;
-//  src: url("src/fonts/Montserrat-Light.ttf");
-//}
-
 body {
-  font-family: MontserratLight, "sans-serif";
+  font-family: Montserrat, sans-serif;
+}
+
+:disabled {
+  cursor: not-allowed;
 }
 
 .container {
