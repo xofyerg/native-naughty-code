@@ -1,7 +1,7 @@
-import "./styles/style.css";
+import "./style.css";
 import { isValid } from "./helpers/validation";
-import { Question } from "./scss/scripts/question";
-import { createModal } from "./helpers/modal";
+import { Question } from "./scripts/question";
+import { openModal } from "./plugins/modal";
 
 const form = document.getElementById("input-form");
 const input = form.querySelector("#input");
@@ -32,6 +32,6 @@ function submitFormHandler(e) {
   }
 }
 
-function openModal() {
-  createModal("Authorization", "<h1>Auth</h1>");
-}
+// function openModal() {
+//   createModal("Authorization", "<h1>Auth</h1>");
+// }
