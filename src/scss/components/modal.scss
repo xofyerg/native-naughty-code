@@ -1,11 +1,31 @@
 .modal {
-  background: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
+  &.open .modal__backdrop,
+  &.open .modal__content {
+    opacity: 1;
+    z-index: 100;
+  }
+
+  &.open .modal__content {
+    transform: translateY(0%);
+  }
+}
+
+.modal__backdrop,
+.modal__content {
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal {
+  &__backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+  }
 
   &__content {
     padding: 20px 25px;
@@ -14,6 +34,8 @@
     margin: auto;
     min-width: 600px;
     z-index: 10;
+    transform: translateY(-200%);
+    transition: transform 1s ease-in;
   }
 
   &__header {

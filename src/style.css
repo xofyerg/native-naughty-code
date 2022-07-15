@@ -180,7 +180,21 @@ body {
   border-radius: 50%;
 }
 
-.modal {
+.modal.open .modal__backdrop, .modal.open .modal__content {
+  opacity: 1;
+  z-index: 100;
+}
+.modal.open .modal__content {
+  transform: translateY(0%);
+}
+
+.modal__backdrop,
+.modal__content {
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal__backdrop {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
@@ -196,6 +210,8 @@ body {
   margin: auto;
   min-width: 600px;
   z-index: 10;
+  transform: translateY(-200%);
+  transition: transform 1s ease-in;
 }
 .modal__header {
   margin-bottom: 10px;

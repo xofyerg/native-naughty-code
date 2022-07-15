@@ -1,23 +1,44 @@
-// export function createModal(title, content) {
-// const modal = document.createElement("div");
-// modal.setAttribute("id", "modal-window");
-// console.log(modal);
-// // modal.addEventListener("click", () => {
-// //   modal.remove();
-// // });
-// // function clickHandler() {
-// //   modal.remove();
-// // }
-// modal.classList.add("modal-window");
-// modal.innerHTML = `<div class="modal-window__content">
-//   <div>${title}${content}</div>
-//   <button id="hide-modal">Close</button>
-// </div>`;
-// const hideBtn = document.querySelector("#hide-modal");
-// console.log(hideBtn);
-// document.body.append(modal);
-// }
+function _createModal(options) {
+  const modal = document.createElement("div");
+  modal.classList.add("modal");
+  modal.insertAdjacentHTML(
+    "afterbegin",
+    `
+    <div class="modal__backdrop">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span class="modal__title">Modal title</span>
+          <span class="modal__close">&times;</span>
+        </div>
+        <div class="modal__body">
+          <span>Modal body</span>
+        </div>
+        <div class="modal__footer">
+          <button>Ok</button>
+          <button>Cancel</button>
+        </div>
+      </div>
+    </div>
+  `
+  );
 
-function openModal(options) {
-  return {};
+  document.body.appendChild(modal);
+
+  return modal;
 }
+
+export function modal(options) {
+  const nodeModal = _createModal(options);
+
+  return {
+    open() {
+      nodeModal.classList.add("open");
+    },
+    close() {
+      nodeModal.classList.remove("open");
+    },
+    destroy() {},
+  };
+}
+
+console.log("modal js opened");
