@@ -20,15 +20,25 @@ body {
   width: 740px;
 }
 
-.primary-btn {
+.btn {
   display: block;
+  width: 100px;
   padding: 10px 0;
   border-radius: 5px;
   font-size: 16px;
+  color: $white;
+}
+
+.primary-btn {
+  background-color: $violet;
+}
+
+.secondary-btn {
+  background-color: $lg-red;
 }
 
 .primary-input {
   padding: 7px;
-  background: $color-grey;
+  background: $grey;
   border-radius: 4px;
 }

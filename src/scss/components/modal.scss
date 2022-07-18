@@ -5,8 +5,26 @@
     z-index: 100;
   }
 
+  &.hide .modal__backdrop,
+  &.hide .modal__content {
+    opacity: 1;
+    z-index: 100;
+  }
+
   &.open .modal__content {
     transform: translateY(0%);
+  }
+
+  &.open .modal__backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &.hide .modal__content {
+    transform: translateY(-200%);
+  }
+
+  &.hide .modal__backdrop {
+    background-color: rgba(0, 0, 0, 0);
   }
 }
 
@@ -18,7 +36,8 @@
 
 .modal {
   &__backdrop {
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.2s ease-in;
     position: fixed;
     top: 0;
     right: 0;
@@ -32,10 +51,9 @@
     border-radius: 5px;
     background: #ffffff;
     margin: auto;
-    min-width: 600px;
     z-index: 10;
     transform: translateY(-200%);
-    transition: transform 1s ease-in;
+    transition: transform 0.2s ease-in;
   }
 
   &__header {
@@ -57,5 +75,7 @@
   }
 
   &__footer {
+    @extend %flex-right;
+    gap: 10px;
   }
 }

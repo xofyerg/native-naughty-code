@@ -8,12 +8,39 @@ const input = form.querySelector("#input");
 const submitBtn = form.querySelector("#submit");
 const allBtn = document.getElementById("modal-btn");
 
+const showModal = modal({
+  title: "Simple modal window",
+  closable: true,
+  content: `
+      <span>Modal body, some content</span>
+    `,
+  width: "600px",
+  footerBtns: [
+    {
+      text: "Ok",
+      class: "primary-btn",
+      handler() {
+        console.log("primary clicked");
+      },
+    },
+    {
+      text: "Cancel",
+      class: "secondary-btn",
+      handler() {
+        showModal.close();
+      },
+    },
+  ],
+});
+
 window.addEventListener("load", Question.renderList);
 form.addEventListener("submit", submitFormHandler);
 input.addEventListener("input", () => {
   submitBtn.disabled = !isValid(input.value);
 });
-allBtn.addEventListener("click", showModal);
+allBtn.addEventListener("click", () => {
+  showModal.open();
+});
 
 function submitFormHandler(e) {
   e.preventDefault();
@@ -30,8 +57,4 @@ function submitFormHandler(e) {
       submitBtn.disabled = false;
     });
   }
-}
-
-function showModal() {
-  modal().open();
 }
